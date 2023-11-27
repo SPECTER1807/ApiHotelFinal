@@ -90,8 +90,7 @@ class Studio(APIView):
 class Vip(APIView):
     template_name="vip.html"
     def get(self, request):
-        return render(request,self.template_na
-                      me) 
+        return render(request,self.template_name) 
     
 class Vvip(APIView):
     template_name="vvip.html"
