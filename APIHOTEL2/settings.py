@@ -32,7 +32,10 @@ SECRET_KEY = 'django-insecure-j-1o75_lg5q^08sfz=9gc-7mj%9zwuer6w_gn)bk0k50@!=pb@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+# Agrega el nombre de host externo (RENDER_EXTERNAL_HOSTNAME) a la lista ALLOWED_HOSTS
+ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
