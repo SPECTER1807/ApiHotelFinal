@@ -22,7 +22,7 @@ from api.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index.html',Home.as_view(),name='index'),
+    path('',Home.as_view(),name='index'),
     path('about.html',About.as_view(),name='about'),
     path('amenities.html',Amenities.as_view(),name='amenities'),
     path('bookings.html',Bookings.as_view(),name='bookings'),
