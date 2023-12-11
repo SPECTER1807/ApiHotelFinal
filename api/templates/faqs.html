@@ -1,37 +1,37 @@
-{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ's - Gordon Resort Hotel</title>
+    <title>Preguntas frecuentes - Gordon Resort Hotel</title>
+    {% load static %}
+    <meta name="keywords" content="Gordon Resort Hotel Abraka Preguntas frecuentes, Gordon Resort Hotel, McCarthy Beach, Playas en el estado de Delta, Playas en Nigeria, playas en África, playas cerca de mí" />
+    <meta name="description" content="Preguntas frecuentes sobre el Gordon Resort Hotel." />
 
-    <meta name = "keywords" content = "Gordon Resort Hotel Abraka FAQS, Gordon Resort Hotel, McCarthy Beach, Beaches in Delta state, Beaches in Nigeria, beaches in Africa, beaches near me" />
-    <meta name = "description" content = " Gordon Resort Hotel frequently asked question." />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1EVRTK6PD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1EVRTK6PD"></script>
-     <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
- 
-     gtag('config', 'G-C1EVRTK6PD');
-     </script>
- 
-     <!-- Google Tag Manager -->
-     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-     })(window,document,'script','dataLayer','GTM-NSMS76N');</script>
-     <!-- End Google Tag Manager -->
-                     
+        gtag('config', 'G-C1EVRTK6PD');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NSMS76N');</script>
+    <!-- Fin de Google Tag Manager -->
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 
-    <!-- Main CSS -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Favicon -->
@@ -52,7 +52,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- Fin de Google Tag Manager (noscript) -->
 
     <!-- Loader -->
     <!-- <div class="loader-div" id="loader-div">
@@ -60,13 +60,13 @@
         </div>
     </div> -->
 
-    <!-- End Loader -->
- </head>
- <body>
-     <!-- Google Tag Manager (noscript) -->
-     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
-     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-     <!-- End Google Tag Manager (noscript) -->
+    <!-- Fin del Loader -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Fin de Google Tag Manager (noscript) -->
 
     <!-- Loader -->
     <!-- <div class="loader-div" id="loader-div">
@@ -74,171 +74,164 @@
         </div>
     </div> -->
 
-    <!-- End Loader -->
+    <!-- Fin del Loader -->
 
-   <!-- Header Navigation -->
-   <nav>
-    <div class="container">
-    <div class="row">
-    <header class="header">
-        <div class="header-left">
-            <a href="./index.html">
-                <img class="logo" src="{% static 'media/logo.png'%}" alt="grh-logo">
-            </a>
-        </div>
+    <!-- Navegación del encabezado -->
+    <nav>
+        <div class="container">
+            <div class="row">
+                <header class="header">
+                    <div class="header-left">
+                        <a href="./index.html">
+                            <img class="logo" src="{% static 'media/logo.png'%}" alt="grh-logo">
+                        </a>
+                    </div>
 
-        <div class="header-right">
-            <div class="nav-menu" id="navi-menu">
-            <ul class="nav-items">
-                <li class="list-items" ><a class="header-link" href="./index.html">Home</a></li>
-                <li class="list-items"><a class="header-link" href="./about.html">About</a></li>
-                <li class="list-items"><a class="header-link" href="./gallery.html">Gallery</a></li>
-                <li class="list-items"><a class="header-link"  href="./rooms.html">Rooms</a></li>
-                <li class="list-items"><a class="header-link"  href="./amenities.html">Amenities</a></li>
-                <li class="list-items"><a class="header-link"  href="./bookings.html">Bookings</a></li>
-                <li class="list-items"><a class="header-link" id="active-nav" href="./faqs.html">FAQs</a></li>
-            </ul>
-            <div class = "vertical"></div>
-            <button class="head-btn" onclick="window.location.href = './contact.html'">Contact Us</button> 
+                    <div class="header-right">
+                        <div class="nav-menu" id="navi-menu">
+                            <ul class="nav-items">
+                                <li class="list-items"><a class="header-link" href="./index.html">Inicio</a></li>
+                                <li class="list-items"><a class="header-link" href="./about.html">Acerca de</a></li>
+                                <li class="list-items"><a class="header-link" href="./gallery.html">Galería</a></li>
+                                <li class="list-items"><a class="header-link" href="./rooms.html">Habitaciones</a></li>
+                                <li class="list-items"><a class="header-link" href="./amenities.html">Servicios</a></li>
+                                <li class="list-items"><a class="header-link" href="./bookings.html">Reservas</a></li>
+                                <li class="list-items"><a class="header-link" id="active-nav" href="./faqs.html">FAQs</a></li>
+                            </ul>
+                            <div class="vertical"></div>
+                            <button class="head-btn" onclick="window.location.href = './contact.html'">Contáctanos</button>
+                        </div>
+
+                        <!-- Menú móvil -->
+                        <div class="mobile-menu" id="hamburger">
+                            <i id="openMenu" class="fa-solid fa-bars fa-2xl" style="color: #2c333d;"></i>
+                            <i id="closeMenu" class="hide fa-solid fa-x fa-2xl " style="color: #2c333d;"></i>
+                        </div>
+                    </div>
+                </header>
             </div>
-        
-       
-
-          
-         <!-- Mobile Menu -->
-         <div class="mobile-menu" id="hamburger">
-            <i id="openMenu" class="fa-solid fa-bars fa-2xl" style="color: #2c333d;"></i>
-            <i id="closeMenu" class="hide fa-solid fa-x fa-2xl " style="color: #2c333d;"></i>
         </div>
-        </div>
-    </header>
-    </div>
-    </div>
-</nav>
-   <!-- End Header -->
+    </nav>
+    <!-- Fin del encabezado -->
 
-
-<!-- Breadcrumb -->
-<section class="breadcrumb-section">
-    <div class="container" id="breadcrumb-cont">
-        <div class="row" id="breadcrumb-row">
-            <div class="col-12" id="breadcrumb-col">
-                <h1 class="page-title">FAQ's</h1>
+    <!-- Miga de pan -->
+    <section class="breadcrumb-section">
+        <div class="container" id="breadcrumb-cont">
+            <div class="row" id="breadcrumb-row">
+                <div class="col-12" id="breadcrumb-col">
+                    <h1 class="page-title">FAQs</h1>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!-- Fin de la miga de pan -->
 
-<!-- End Breadcrumb -->
-
-<!-- Faqs section -->
+    <!-- Sección de preguntas frecuentes -->
     <section class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-12" id="left-abt-col">
-                    <h2 class="header-h2 text-center">FAQ's</h2>
-                    
+                    <h2 class="header-h2 text-center">FAQs</h2>
 
                     <div class="accordion-content">
 
-                    <!-- Beach FAQs -->
+                        <!-- Preguntas frecuentes sobre la playa -->
                         <div>
-                            <input type="checkbox" id="questionbch" name="q"  class="questions">
+                            <input type="checkbox" id="questionbch" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionbch" class="question">
-                              What are your entry fees to the beach?
+                                ¿Cuáles son sus tarifas de entrada a la playa?
                             </label>
                             <div class="answers">
-                              We charge entry fees of ₦1000 per adult and ₦500 per child</div>
+                                Cobramos tarifas de entrada de ₦1000 por adulto y ₦500 por niño.
+                            </div>
                         </div>
-
 
                         <div>
-                            <input type="checkbox" id="questionbch1" name="q"  class="questions">
+                            <input type="checkbox" id="questionbch1" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionbch1" class="question">
-                              What are your boat cruise fees at the beach?
+                                ¿Cuáles son las tarifas de su paseo en bote en la playa?
                             </label>
                             <div class="answers">
-                                <strong>Our Beach Boat Cruise Charges: </strong>
+                                <strong>Nuestras tarifas de paseo en bote en la playa son:</strong>
                                 <br>
-                                1. Quicksilver 540 Cruise - N11,000.00 for 10 minutes.
+                                1. Quicksilver 540 Cruise - N11,000.00 por 10 minutos.
                                 <br>
-                                2. Explorer Sport Utility Cruise- N9,000.00 for 10 minutes.
+                                2. Explorer Sport Utility Cruise- N9,000.00 por 10 minutos.
                                 <br>
-                                3. Bluewhite Cruise - N7,000. 00 for 10 minutes.
+                                3. Bluewhite Cruise - N7,000.00 por 10 minutos.
                                 <br>
-                                4. Navyblue Cruise - N6,000.00 for 10 minutes.
-                                </div>
+                                4. Navyblue Cruise - N6,000.00 por 10 minutos.
+                            </div>
                         </div>
-                        
+
                         <div>
                             <input type="checkbox" id="question9" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="question9" class="question">
-                            Am i allowed to bring my food / drinks to the beach?
+                                ¿Puedo llevar mi comida/bebida a la playa?
                             </label>
                             <div class="answers">
-                                Guests may bring their own food but own drinks are subject to corkage.
+                                Los huéspedes pueden traer su propia comida, pero las bebidas propias están sujetas a descorche.
                             </div>
                         </div>
+                        <!-- Fin de preguntas frecuentes sobre la playa -->
 
-                        <!-- Beach FAQS End -->
-
-                        <!-- Rooms FAQS-->
+                        <!-- Preguntas frecuentes sobre habitaciones -->
 
                         <div>
                             <input type="checkbox" id="questionRM" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionRM" class="question">
-                            How do i go about reservations?
+                                ¿Cómo hago para hacer reservas?
                             </label>
                             <div class="answers">
-                            Reservations can be made via our <a style="color: #FBB03B" href="./bookings.html">bookings </a>page, or by<a style="color: #FBB03B" href="mailto:info@gordonresorthotel.com"> email</a> or via our dedicated <a style="color: #FBB03B" href="tel:+2349157031699"> telephone </a>lines.
+                                Las reservas se pueden hacer a través de nuestra <a style="color: #FBB03B" href="./bookings.html">página de reservas</a>, o por <a style="color: #FBB03B" href="mailto:info@gordonresorthotel.com">correo electrónico</a> o a través de nuestras líneas telefónicas dedicadas al <a style="color: #FBB03B" href="tel:+2349157031699">teléfono</a>.
                             </div>
                         </div>
 
                         <div>
-                          <input type="checkbox" id="questionRM0" name="q"  class="questions">
-                          <div class="plus">+</div>
-                          <label for="questionRM0" class="question">
-                            What are your check in and check out times?
-                          </label>
-                          <div class="answers">
-                            Guests can check in from 1pm and are expected to check out latest 12noon following day.</div>
+                            <input type="checkbox" id="questionRM0" name="q" class="questions">
+                            <div class="plus">+</div>
+                            <label for="questionRM0" class="question">
+                                ¿Cuáles son sus horarios de entrada y salida?
+                            </label>
+                            <div class="answers">
+                                Los huéspedes pueden hacer el check-in a partir de la 1:00 pm y se espera que hagan el check-out a más tardar a las 12:00 pm del día siguiente.
+                            </div>
                         </div>
 
                         <div>
                             <input type="checkbox" id="questionRM1" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionRM1" class="question">
-                            What am i allowed access to as a guest?
+                                ¿A qué tengo acceso como huésped?
                             </label>
                             <div class="answers">
-                                Guests are entitled to free access to beach for maximum of 2 persons per room and free access to the nightclub.
+                                Los huéspedes tienen acceso gratuito a la playa para un máximo de 2 personas por habitación y acceso gratuito a la discoteca.
                             </div>
                         </div>
 
                         <div>
-                          <input type="checkbox" id="questionRM2" name="q" class="questions">
-                          <div class="plus">+</div>
-                          <label for="questionRM2" class="question">
-                            Are there connecting rooms?
-                          </label>
-                          <div class="answers">
-                           There are currently no connecting rooms but <a style="color: #FBB03B" href="./accommodations/cottage.html">Cottage</a>  has 2 bedrooms.
-                          </div>
+                            <input type="checkbox" id="questionRM2" name="q" class="questions">
+                            <div class="plus">+</div>
+                            <label for="questionRM2" class="question">
+                                ¿Hay habitaciones conectadas?
+                            </label>
+                            <div class="answers">
+                                Actualmente no hay habitaciones conectadas, pero la <a style="color: #FBB03B" href="./accommodations/cottage.html">Cabaña</a> tiene 2 habitaciones.
+                            </div>
                         </div>
-                        
+
                         <div>
                             <input type="checkbox" id="questionRM3" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionRM3" class="question">
-                            What is your cancellation and refund policy?
+                                ¿Cuál es su política de cancelación y reembolso?
                             </label>
                             <div class="answers">
-                                Guests who cancel before 6pm are entitled to full refund, otherwise, deposit will be forfeited.
+                                Los huéspedes que cancelen antes de las 6:00 pm tienen derecho a un reembolso completo, de lo contrario, se perderá el depósito.
                             </div>
                         </div>
 
@@ -246,10 +239,10 @@
                             <input type="checkbox" id="questionRM4" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionRM4" class="question">
-                            Is laundry an amenity in my booking?
+                                ¿La lavandería está incluida en mi reserva?
                             </label>
                             <div class="answers">
-                              Laundry services are not inlcuded in your room packages, so you would have to pay for that per use
+                                Los servicios de lavandería no están incluidos en los paquetes de habitaciones, por lo que tendría que pagar por su uso.
                             </div>
                         </div>
 
@@ -257,74 +250,74 @@
                             <input type="checkbox" id="questionRM5" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionRM5" class="question">
-                            What time does restaurant / room service close?
+                                ¿A qué hora cierra el restaurante/servicio a la habitación?
                             </label>
                             <div class="answers">
-                               Restaurant / Room service closes at 23:00Hrs
+                                El restaurante/servicio a la habitación cierra a las 23:00 hrs.
                             </div>
                         </div>
+
                         <div>
                             <input type="checkbox" id="questionRM6" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="questionRM6" class="question">
-                            Does my reservation cover complimentary breakfast?
+                                ¿Mi reserva incluye desayuno gratuito?
                             </label>
                             <div class="answers">
-                               At this point, none of our rooms / suites offer complimentary breakfast
+                                En este momento, ninguna de nuestras habitaciones/suites ofrece desayuno gratuito.
                             </div>
                         </div>
-                        <!-- Rooms End -->
+                        <!-- Fin de preguntas frecuentes sobre habitaciones -->
 
-
-                        <!-- General FAQS -->
+                        <!-- Preguntas frecuentes generales -->
                         <div>
-                          <input type="checkbox" id="question" name="q" class="questions">
-                          <div class="plus">+</div>
-                          <label for="question" class="question">
-                            Is there wifi available?  
-                          </label>
-                          <div class="answers">
-                            At this point, we do not have wifi service.
-                          </div>
+                            <input type="checkbox" id="question" name="q" class="questions">
+                            <div class="plus">+</div>
+                            <label for="question" class="question">
+                                ¿Hay wifi disponible?
+                            </label>
+                            <div class="answers">
+                                En este momento, no tenemos servicio de wifi.
+                            </div>
                         </div>
 
-
                         <div>
+
                             <input type="checkbox" id="question01" name="q" class="questions">
                             <div class="plus">+</div>
                             <label for="question01" class="question">
-                            Are pets permitted?
+                                ¿Se permiten mascotas?
                             </label>
                             <div class="answers">
-                            Currently, pets are prohibited. 
+                                Actualmente, las mascotas están prohibidas.
                             </div>
                         </div>
+                        <!-- Fin de preguntas frecuentes generales -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<!-- Faqs Section end-->
+    <!-- Fin de la sección de preguntas frecuentes -->
 
-
-     <!-- Cookies -->
-   <div id="cookieNotice" class="light display-right">
-    <div id="closeIcon">
-        <i class="fa-solid fa-circle-xmark fa-xl" style="color: #2C333D;"></i>
-    </div>
-    <div class="title-wrap">
-        <h4>Cookie Consent</h4>
-    </div>
-    <div class="content-wrap">
-        <div class="msg-wrap">
-            <p>This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our  <a style="color:#FBB03B;" href="./privacy-policy.html">Privacy Policy</a></p>
-            <div class="btn-wrap">
-                <button class="cookie-btn" onclick="acceptCookieConsent();">Accept</button>
+    <!-- Cookies -->
+    <div id="cookieNotice" class="light display-right">
+        <div id="closeIcon">
+            <i class="fa-solid fa-circle-xmark fa-xl" style="color: #2C333D;"></i>
+        </div>
+        <div class="title-wrap">
+            <h4>Consentimiento de cookies</h4>
+        </div>
+        <div class="content-wrap">
+            <div class="msg-wrap">
+                <p>Este sitio web utiliza cookies u tecnologías similares para mejorar su experiencia de navegación y proporcionar recomendaciones personalizadas. Al continuar utilizando nuestro sitio web, acepta nuestra <a style="color:#FBB03B;" href="./privacy-policy.html">Política de privacidad</a>.</p>
+                <div class="btn-wrap">
+                    <button class="cookie-btn" onclick="acceptCookieConsent();">Aceptar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Cookies End -->
+    <!-- Fin de Cookies -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -332,55 +325,50 @@
             <div class="row" id="footer-row">
                 <div class="col-12 col-lg-4">
                     <img class="footer-logo" src="{% static 'media/footer-logo.png'%}" alt="footer-logo">
-                    <p class="footer-text">Gordon Resort Hotel popularly known as McCarthy Beach is located in the University town of Abraka in Delta State.
-                        Set out in large expanse of land of over 65 hectares the resort boasts of over 90 exquisitely appointed and tastefully furnished Rooms/Suites. 
-                    </p>
+                    <p class="footer-text">El Gordon Resort Hotel, conocido popularmente como McCarthy Beach, se encuentra en la ciudad universitaria de Abraka, en el estado de Delta. Situado en una gran extensión de tierra de más de 65 hectáreas, el resort cuenta con más de 90 habitaciones/suites exquisitamente decoradas y amuebladas con buen gusto.</p>
                 </div>
                 <div class="col-12 col-lg-4 ">
                     <h6 class="footer-header">
-                        Quick Links
+                        Enlaces rápidos
                     </h6>
 
                     <ul class="footer-links">
-                        <li class="list-items" ><a class="footer-nav" href="./index.html">Home</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./about.html">About</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./gallery.html">Gallery</a></li>
-                        <li class="list-items"><a class="footer-nav"  href="./rooms.html">Rooms</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./amenities.html">Amenities</a></li>
-                        <li class="list-items"><a class="footer-nav"  href="./bookings.html">Bookings</a></li>
-                        <li class="list-items"><a class="footer-nav"  href="./contact.html">Contact</a></li>
+                        <li class="list-items" ><a class="footer-nav" href="./index.html">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" href="./about.html">Acerca de</a></li>
+                        <li class="list-items"><a class="footer-nav" href="./gallery.html">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav"  href="./rooms.html">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="./amenities.html">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav"  href="./bookings.html">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav"  href="./contact.html">Contacto</a></li>
                         <li class="list-items"><a class="footer-nav" id="active-nav" href="./faqs.html">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4">
                     <h6 class="footer-header">
-                        Legal Information
+                        Información legal
                     </h6>
-                    <p class="footer-link"><a href="./privacy-policy.html">Privacy Policy</a></p>
-
+                    <p class="footer-link"><a href="./privacy-policy.html">Política de privacidad</a></p>
                 </div>
             </div>
 
-            <!-- copyright -->
+            <!-- Derechos de autor -->
             <div class="row" id="copyright-row">
                 <div class="col-12" id="copyright-col">
-                    <p class="copyright-text"> 
-                        Gordon Resort Hotel &copy; <span id="year"></span> All Rights Reserved.<br> Powered By <a class="footer-link" href="https://oviematthew.com" target="_blank">Ovie</a> of <a class="footer-link" href="https://instagram.com/anomali_tech" target="_blank">Anomali Tech </a>
-                    </p>
+                    <p class="copyright-text">Gordon Resort Hotel &copy; <span id="year"></span> Todos los derechos reservados.<br> Desarrollado por <a class="footer-link" href="https://oviematthew.com" target="_blank">Ovie</a> de <a class="footer-link" href="https://instagram.com/anomali_tech" target="_blank">Anomali Tech </a></p>
                 </div>
             </div>
         </div>
    </footer>
-   <!-- Footer End -->
+   <!-- Fin del Footer -->
 
-   <!-- Back to top button -->
-<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+   <!-- Botón de volver arriba -->
+   <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+   </button>
     
     <!-- JS -->
    <script src="{% static 'js/index.js'%}"></script>
-
-    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js'%}" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js'%}" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
+
