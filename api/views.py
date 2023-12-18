@@ -6,7 +6,11 @@ class Home(APIView):
     template_name="index.html"
     def get(self, request):
         return render(request,self.template_name) 
-    
+
+class Login(APIView):
+    template_name="login.html"
+    def get(self,request):
+        return render(request,self.template_name)    
 class About(APIView):
     template_name="about.html"
     def get(self, request):
