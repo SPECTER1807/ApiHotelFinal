@@ -14,10 +14,11 @@ input {
 .container {
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: #333; /* Cambia esto al color oscuro deseado */
   min-height: 100vh;
   overflow: hidden;
 }
+
 
 .forms-container {
   position: absolute;
