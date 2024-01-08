@@ -190,7 +190,7 @@ form.sign-in-form {
   z-index: 6;
 }
 
-.left-panel {
+/* .left-panel {
   pointer-events: all;
   padding: 3rem 17% 2rem 12%;
 }
@@ -198,7 +198,7 @@ form.sign-in-form {
 .right-panel {
   pointer-events: none;
   padding: 3rem 12% 2rem 17%;
-}
+} */
 
 .panel .content {
   color: #fff;
@@ -305,9 +305,9 @@ form.sign-in-form {
     grid-row: 3 / 4;
   }
 
-  .left-panel {
+  /* .left-panel {
     grid-row: 1 / 2;
-  }
+  } */
 
   .image {
     width: 200px;

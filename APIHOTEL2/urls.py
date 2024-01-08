@@ -28,6 +28,7 @@ urlpatterns = [
     path('authentication-register.html', views.registro_view, name='registro'),
     path('dashboard.html',Dashboard.as_view(),name='dashboard'),
     path('login.html',Login.as_view(),name='login'),
+    path('register.html',Register.as_view(),name='register'),
     path('about.html',About.as_view(),name='about'),
     path('amenities.html',Amenities.as_view(),name='amenities'),
     path('bookings.html',Bookings.as_view(),name='bookings'),

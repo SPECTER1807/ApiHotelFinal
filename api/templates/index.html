@@ -57,7 +57,7 @@
                                     // Verificar si se hizo clic dos veces
                                     if (clickCount === 2) {
                                         // Redirigir a la página de login
-                                        window.location.href = "{% url 'login' %}";
+                                        window.location.href = "{% url 'login_view' %}";
                                     }
                         
                                     // Reiniciar el contador después de un segundo
@@ -80,6 +80,7 @@
                                 <li class="list-items"><a class="header-link" href="{% url 'amenities'%}">Servicios</a></li>
                                 <li class="list-items"><a class="header-link" href="{% url 'bookings'%}">Reservas</a></li>
                                 <li class="list-items"><a class="header-link" href="{% url 'faqs'%}">Preguntas Frecuentes</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'register'%}">Register</a></li>
                             </ul>
                             <div class="vertical"></div>
                             <button class="head-btn" onclick="window.location.href = './contact.html'">Contáctanos</button>
