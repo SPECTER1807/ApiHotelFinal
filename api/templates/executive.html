@@ -45,13 +45,13 @@
         <div class="header-right">
             <div class="nav-menu" id="navi-menu">
             <ul class="nav-items">
-                <li class="list-items" ><a class="header-link" href="../index.html">Home</a></li>
-                <li class="list-items"><a class="header-link" href="../about.html">About</a></li>
-                <li class="list-items"><a class="header-link" href="../gallery.html">Gallery</a></li>
-                <li class="list-items"><a class="header-link" href="../rooms.html">Rooms</a></li>
-                <li class="list-items"><a class="header-link" href="../amenities.html">Amenities</a></li>
-                <li class="list-items"><a class="header-link" href="../bookings.html">Bookings</a></li>
-                <li class="list-items"><a class="header-link" href="../faqs.html">FAQs</a></li>
+                <li class="list-items" ><a class="header-link" href="{% url 'index'%}">Inicio</a></li>
+                <li class="list-items"><a class="header-link" href="{% url 'about'%}">Acerca</a></li>
+                <li class="list-items"><a class="header-link" href="{% url 'gallery'%}">Galería</a></li>
+                <li class="list-items"><a class="header-link" href="{% url 'rooms'%}">Habitaciones</a></li>
+                <li class="list-items"><a class="header-link" href="{% url 'amenities'%}">Servicios</a></li>
+                <li class="list-items"><a class="header-link" href="{% url 'bookings'%}">Reservas</a></li>
+                <li class="list-items"><a class="header-link" href="{% url 'faqs'%}">Preguntas Frecuentes</a></li>
             </ul>
             <div class = "vertical"></div>
             <button class="head-btn" onclick="window.location.href = '../contact.html'">Contact Us</button> 

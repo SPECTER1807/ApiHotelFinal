@@ -59,13 +59,13 @@
                     <div class="header-right">
                         <div class="nav-menu" id="navi-menu">
                             <ul class="nav-items">
-                                <li class="list-items" ><a class="header-link" href="./index.html">Inicio</a></li>
-                                <li class="list-items"><a class="header-link" id="active-nav" href="./about.html">Acerca</a></li>
-                                <li class="list-items"><a class="header-link" href="./gallery.html">Galería</a></li>
-                                <li class="list-items"><a class="header-link" href="./rooms.html">Habitaciones</a></li>
-                                <li class="list-items"><a class="header-link" href="./amenities.html">Servicios</a></li>
-                                <li class="list-items"><a class="header-link" href="./bookings.html">Reservas</a></li>
-                                <li class="list-items"><a class="header-link" href="./faqs.html">Preguntas frecuentes</a></li>
+                                <li class="list-items" ><a class="header-link" href="{% url 'index'%}">Inicio</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'about'%}">Acerca</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'gallery'%}">Galería</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'rooms'%}">Habitaciones</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'amenities'%}">Servicios</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'bookings'%}">Reservas</a></li>
+                                <li class="list-items"><a class="header-link" href="{% url 'faqs'%}">Preguntas Frecuentes</a></li>
                             </ul>
                             <div class="vertical"></div>
                             <button class="head-btn" onclick="window.location.href = './contact.html'">Contáctanos</button> 
@@ -129,25 +129,6 @@
         </div>
     </section>
     <!-- Fin de la sección Acerca -->
-
-    <!-- Cookies -->
-    <div id="cookieNotice" class="light display-right">
-        <div id="closeIcon">
-            <i class="fa-solid fa-circle-xmark fa-xl" style="color: #2C333D;"></i>
-        </div>
-        <div class="title-wrap">
-            <h4>Consentimiento de cookies</h4>
-        </div>
-        <div class="content-wrap">
-            <div class="msg-wrap">
-                <p>Este sitio web utiliza cookies u tecnologías similares para mejorar su experiencia de navegación y proporcionar recomendaciones personalizadas. Al continuar utilizando nuestro sitio web, acepta nuestra <a style="color:#FBB03B;" href="./privacy-policy.html">Política de privacidad</a>.</p>
-                <div class="btn-wrap">
-                    <button class="cookie-btn" onclick="acceptCookieConsent();">Aceptar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin de cookies -->
 
     <!-- Footer -->
     <footer class="footer">

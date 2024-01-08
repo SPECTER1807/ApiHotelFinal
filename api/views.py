@@ -1,7 +1,73 @@
-from django.shortcuts import render
+
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from rest_framework.views import APIView
 
 # Create your views here.
+
+def registro_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        confirm_password = request.POST.get('password2')
+        
+        if password == confirm_password:
+            if not User.objects.filter(username=username).exists():
+                if not User.objects.filter(email=email).exists():
+                    user = User.objects.create_user(username=username, email=email, password=password)
+                    if user is not None:
+                        # Envío del correo
+                        subject = 'Registro Exitoso'
+                        from_email = 'victorm.mtz.1999@gmail.com'  #
+                        to_email = [email]
+                        
+                        # Renderiza el template HTML del correo
+                        html_content = render_to_string('correo.html', {
+                            'username': username,
+                            'password': password,
+                        })
+                        
+                        text_content = strip_tags(html_content)
+                        
+                        msg = EmailMultiAlternatives(subject, text_content, from_email, to_email)
+                        msg.attach_alternative(html_content, "text/html")
+                        msg.send()
+                        
+                    
+                        return redirect('login_view')
+                else:
+                    error_message = "El correo electrónico ya está en uso."
+                    return render(request, 'authentication-register.html', {'error_message': error_message})
+            else:
+                error_message = "El nombre de usuario ya existe."
+                return render(request, 'authentication-register.html', {'error_message': error_message})
+        else:
+            error_message = "Las contraseñas no coinciden."
+            return render(request, 'authentication-register.html', {'error_message': error_message})
+
+    return render(request, 'authentication-register.html')
+
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('dashboard')
+        else:
+            error_message = "Los datos son incorrectos. Por favor, intentalo de nuevo"
+            return render(request, 'authentication-login.html', {'error_message': error_message})
+    return render(request, 'authentication-login.html')
+
 
 class Dashboard(APIView):
     template_name="dashboard.html"
