@@ -7,23 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Suite - Gordon Resort Hotel</title>
     {% load static %}
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1EVRTK6PD"></script>
-     <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
- 
-     gtag('config', 'G-C1EVRTK6PD');
-     </script>
- 
-     <!-- Google Tag Manager -->
-     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-     })(window,document,'script','dataLayer','GTM-NSMS76N');</script>
-     <!-- End Google Tag Manager -->
                      
        <!-- Bootstrap -->
        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
@@ -45,15 +28,6 @@
        <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
  </head>
  <body>
-     <!-- Google Tag Manager (noscript) -->
-     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
-     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-     <!-- End Google Tag Manager (noscript) -->
-    <!-- Loader -->
-    <!-- <div class="loader-div" id="loader-div">
-        <div class="spinner">
-        </div>
-    </div> -->
 
     <!-- End Loader -->
 
@@ -71,16 +45,16 @@
         <div class="header-right">
             <div class="nav-menu" id="navi-menu">
             <ul class="nav-items">
-                <li class="list-items" ><a class="header-link" href="../index.html">Home</a></li>
-                <li class="list-items"><a class="header-link" href="../about.html">About</a></li>
-                <li class="list-items"><a class="header-link" href="../gallery.html">Gallery</a></li>
-                <li class="list-items"><a class="header-link" href="../rooms.html">Rooms</a></li>
-                <li class="list-items"><a class="header-link" href="../amenities.html">Amenities</a></li>
-                <li class="list-items"><a class="header-link" href="../bookings.html">Bookings</a></li>
-                <li class="list-items"><a class="header-link" href="../faqs.html">FAQs</a></li>
+                <li class="list-items"><a class="header-link" id="active-nav" href="./index.html">Inicio</a></li>
+                <li class="list-items"><a class="header-link" href="./about.html">Acerca de nosotros</a></li>
+                <li class="list-items"><a class="header-link" href="./gallery.html">Galería</a></li>
+                <li class="list-items"><a class="header-link" href="./rooms.html">Habitaciones</a></li>
+                <li class="list-items"><a class="header-link" href="./amenities.html">Servicios</a></li>
+                <li class="list-items"><a class="header-link" href="./bookings.html">Reservas</a></li>
+                <li class="list-items"><a class="header-link" href="./faqs.html">Preguntas Frecuentes</a></li>
             </ul>
             <div class = "vertical"></div>
-            <button class="head-btn" onclick="window.location.href = '../contact.html'">Contact Us</button> 
+            <button class="head-btn" onclick="window.location.href = '../contact.html'">Contactanos</button> 
             </div>
         
        
@@ -119,9 +93,10 @@
             <div class="row" id="room-content-row">
                <div class="col-12 col-lg-7" id="room-content-col">
                 <h2 class="header-h2">VIP Suite</h2>
-
-                    <p class="about-text-parag">
-                        The charm of our VIP Suuite will enchant you. The majestic headboard, a signature of the hotel, provides the perfect finishing touch to the king-size bed. The arty and traditional fixtures, the beautiful marble console table, the refined materials ... Every little detail has been carefully considered to add to the sense of discreet refinement. The bathrooms are equipped with a bath or shower. These rooms are everything you could wish for when you need to relax after a busy day of exploring the serene environment and the beach.
+                <p class="párrafo-de-texto-sobre-nosotros">
+                    El encanto de nuestra Suite VIP te cautivará. El majestuoso cabecero, una firma del hotel, brinda el toque final perfecto a la cama king-size. Los accesorios artísticos y tradicionales, la hermosa mesa de consola de mármol, los materiales refinados... Cada pequeño detalle ha sido cuidadosamente considerado para agregar al sentido de refinamiento discreto. Los baños están equipados con bañera o ducha. Estas habitaciones son todo lo que podrías desear cuando necesitas relajarte después de un ajetreado día explorando el entorno sereno y la playa.
+                </p>
+                
 
                     <div class="grid-wrapper">
                         <div class="regular">
@@ -182,31 +157,31 @@
                         <div class="left">
                         <div class="facilities">
                             <img src="{% static 'icons/couple.svg'%}" width="27px" alt="people">
-                            <p>2 Persons</p> 
+                            <p>2 Personas</p> 
                         </div>
         
                         <div class="facilities">
                             <img src="{% static 'icons/bed.svg'%}" width="27px" alt="Bedroom">
-                            <p>1 Bedroom</p> 
+                            <p>1 Recamara</p> 
                         </div>
         
                         <div class="facilities">
                             <img src="{% static 'icons/tissue.svg'%}" width="27px" alt="Bathroom">
-                            <p>1 Bathroom</p> 
+                            <p>1 Baño</p> 
                         </div>
         
                         <div class="facilities">
                             <img src="{% static 'icons/chair.svg'%}" width="27px" alt="living-room">
-                            <p>Living Room</p> 
+                            <p>Sala de estar</p> 
                         </div>
                         <div class="facilities">
                             <img src="{% static 'icons/ac.svg'%}" width="27px" alt="AC">
-                            <p>Air Conditioning</p> 
+                            <p>Aire Condicionado</p> 
                         </div>
                        
                         <div class="facilities">
                             <img src="{% static 'icons/parking.svg'%}" width="27px" alt="parking">
-                            <p>Parking</p> 
+                            <p>Estacionamiento</p> 
                         </div>
 
                     </div>
@@ -214,11 +189,11 @@
                     <div class="right">
                         <div class="facilities">
                             <img src="{% static 'icons/dining.svg'%}" width="27px" alt="dining">
-                            <p>Dining Area</p> 
+                            <p>Area de Comedor</p> 
                         </div>
                         <div class="facilities">
                             <img src="{% static 'icons/fridge.svg'%}" width="27px" alt="fridge">
-                            <p>Mini Fridge</p> 
+                            <p>Mini Refrigerador</p> 
                         </div>
         
                         <div class="facilities">
@@ -232,7 +207,7 @@
                         </div>
                         <div class="facilities">
                             <img src="{% static 'icons/beach.svg'%}" width="27px" alt="beach">
-                            <p>Beach Access (2 Per Room)</p> 
+                            <p>Acceso a la playa (2 Por Habitación)</p> 
                         </div>
                         
                     </div>
@@ -246,26 +221,6 @@
         </div>
     </section>
 <!-- Room Section end-->
-
- <!-- Cookies -->
- <div id="cookieNotice" class="light display-right">
-    <div id="closeIcon">
-        <i class="fa-solid fa-circle-xmark fa-xl" style="color: #2C333D;"></i>
-    </div>
-    <div class="title-wrap">
-        <h4>Cookie Consent</h4>
-    </div>
-    <div class="content-wrap">
-        <div class="msg-wrap">
-            <p>This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our  <a style="color:#FBB03B;" href="../privacy-policy.html">Privacy Policy</a></p>
-            <div class="btn-wrap">
-                <button class="cookie-btn" onclick="acceptCookieConsent();">Accept</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Cookies End -->
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -283,14 +238,14 @@
                     </h6>
 
                     <ul class="footer-links">
-                        <li class="list-items" ><a class="footer-nav" href="../index.html">Home</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../about.html">About</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../gallery.html">Gallery</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../rooms.html">Rooms</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../amenities.html">Amenities</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../bookings.html">Bookings</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../contact.html">Contact</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../faqs.html">FAQs</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../index.html">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../about.html">Acerca de</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../gallery.html">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../rooms.html">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../amenities.html">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../bookings.html">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../contact.html">Contacto</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../faqs.html">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4">

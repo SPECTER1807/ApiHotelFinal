@@ -7,23 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Room - Gordon Resort Hotel</title>
     {% load static %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1EVRTK6PD"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-C1EVRTK6PD');
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NSMS76N');</script>
-    <!-- End Google Tag Manager -->
                     
        <!-- Bootstrap -->
        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
@@ -45,18 +28,6 @@
        <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Loader -->
-    <!-- <div class="loader-div" id="loader-div">
-        <div class="spinner">
-        </div>
-    </div> -->
-
-    <!-- End Loader -->
 
    <!-- Header Navigation -->
    <nav>
@@ -71,17 +42,20 @@
 
         <div class="header-right">
             <div class="nav-menu" id="navi-menu">
-            <ul class="nav-items">
-                <li class="list-items" ><a class="header-link" href="../index.html">Home</a></li>
-                <li class="list-items"><a class="header-link" href="../about.html">About</a></li>
-                <li class="list-items"><a class="header-link" href="../gallery.html">Gallery</a></li>
-                <li class="list-items"><a class="header-link" href="../rooms.html">Rooms</a></li>
-                <li class="list-items"><a class="header-link" href="../amenities.html">Amenities</a></li>
-                <li class="list-items"><a class="header-link" href="../bookings.html">Bookings</a></li>
-                <li class="list-items"><a class="header-link" href="../faqs.html">FAQs</a></li>
-            </ul>
-            <div class = "vertical"></div>
-            <button class="head-btn" onclick="window.location.href = '../contact.html'">Contact Us</button> 
+                <ul class="nav-items">
+                    <li class="list-items"><a class="header-link" id="active-nav" href="./index.html">Inicio</a></li>
+                    <li class="list-items"><a class="header-link" href="./about.html">Acerca de nosotros</a></li>
+                    <li class="list-items"><a class="header-link" href="./gallery.html">Galería</a></li>
+                    <li class="list-items"><a class="header-link" href="./rooms.html">Habitaciones</a></li>
+                    <li class="list-items"><a class="header-link" href="./amenities.html">Servicios</a></li>
+                    <li class="list-items"><a class="header-link" href="./bookings.html">Reservas</a></li>
+                    <li class="list-items"><a class="header-link" href="./faqs.html">Preguntas Frecuentes</a></li>
+
+                </ul>
+                <div class="vertical"></div>
+                <button class="head-btn" onclick="window.location.href = '../contact.html'">Contact Us</button>
+            </div>
+            
             </div>
         
        
@@ -272,14 +246,14 @@
                     </h6>
 
                     <ul class="footer-links">
-                        <li class="list-items" ><a class="footer-nav" href="../index.html">Home</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../about.html">About</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../gallery.html">Gallery</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../rooms.html">Rooms</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../amenities.html">Amenities</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../bookings.html">Bookings</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../contact.html">Contact</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../faqs.html">FAQs</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../index.html">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../about.html">Acerca de</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../gallery.html">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../rooms.html">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../amenities.html">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../bookings.html">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../contact.html">Contacto</a></li>
+                        <li class="list-items"><a class="footer-nav" href="../faqs.html">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4">

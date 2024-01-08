@@ -23,7 +23,7 @@ from api.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Home.as_view(),name='index'),
-    path('dashboard.html',Login.as_view(),name='dashboard'),
+    path('dashboard.html',Dashboard.as_view(),name='dashboard'),
     path('login.html',Login.as_view(),name='login'),
     path('about.html',About.as_view(),name='about'),
     path('amenities.html',Amenities.as_view(),name='amenities'),
