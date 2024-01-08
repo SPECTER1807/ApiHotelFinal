@@ -41,10 +41,8 @@
     <div class="row">
     <header class="header">
         <div class="header-left">
-            <a href="../index.html">
-                <img class="logo" src="{% static 'media/logo.png'%}" alt="grh-logo">
-            </a>
-        </div>
+            <img class="logo" src="{% static 'media/logo.png' %}" alt="grh-logo">
+    </div>
 
         <div class="header-right">
             <div class="nav-menu" id="navi-menu">
@@ -266,15 +264,16 @@
                     </h6>
                 
                     <ul class="footer-links">
-                        <li class="list-items" ><a class="footer-nav" href="../index.html">Inicio</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../about.html">Acerca de nosotros</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../gallery.html">Galería</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../rooms.html">Habitaciones</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../amenities.html">Servicios</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../bookings.html">Reservas</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../contact.html">Contacto</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../faqs.html">Preguntas Frecuentes</a></li>
+                        <li class="list-items" ><a class="footer-nav" href="{% url 'index' %}">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'about' %}">Acerca de nosotros</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'gallery' %}">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'rooms' %}">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'amenities' %}">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'bookings' %}">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'contact' %}">Contacto</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'faqs' %}">Preguntas Frecuentes</a></li>
                     </ul>
+                    
                 </div>
                 <div class="col-12 col-lg-4">
                     <h6 class="footer-header">

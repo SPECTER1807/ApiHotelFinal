@@ -42,10 +42,32 @@
             <div class="row">
                 <header class="header">
                     <div class="header-left">
-                        <a href="./index.html">
+                        <a href="#" id="logoLink">
                             <img class="logo" src="{% static 'media/logo.png' %}" alt="grh-logo">
-
                         </a>
+                        
+                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                        <script>
+                            var clickCount = 0;
+                        
+                            $(document).ready(function () {
+                                $("#logoLink").click(function (event) {
+                                    clickCount++;
+                        
+                                    // Verificar si se hizo clic dos veces
+                                    if (clickCount === 2) {
+                                        // Redirigir a la página de login
+                                        window.location.href = "{% url 'login' %}";
+                                    }
+                        
+                                    // Reiniciar el contador después de un segundo
+                                    setTimeout(function () {
+                                        clickCount = 0;
+                                    }, 1000);
+                                });
+                            });
+                        </script>
+                        
                     </div>
 
                     <div class="header-right">
@@ -342,14 +364,14 @@
                     </h6>
                 
                     <ul class="footer-links">
-                        <li class="list-items"><a class="footer-nav" id="active-nav" href="./index.html">Inicio</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./about.html">Acerca de nosotros</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./gallery.html">Galería</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./rooms.html">Habitaciones</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./amenities.html">Servicios</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./bookings.html">Reservas</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./contact.html">Contacto</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./faqs.html">Preguntas Frecuentes</a></li>
+                        <li class="list-items" ><a class="footer-nav" href="{% url 'index' %}">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'about' %}">Acerca de nosotros</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'gallery' %}">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'rooms' %}">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'amenities' %}">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'bookings' %}">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'contact' %}">Contacto</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'faqs' %}">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
                 

@@ -32,18 +32,6 @@
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSMS76N"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Loader -->
-    <!-- <div class="loader-div" id="loader-div">
-        <div class="spinner">
-        </div>
-    </div> -->
-
-    <!-- End Loader -->
 
     <!-- Header Navigation -->
     <nav>
@@ -51,9 +39,7 @@
             <div class="row">
                 <header class="header">
                     <div class="header-left">
-                        <a href="./index.html">
                             <img class="logo" src="{% static 'media/logo.png' %}" alt="grh-logo">
-                        </a>
                     </div>
 
                     <div class="header-right">
@@ -146,15 +132,16 @@
                     </h6>
 
                     <ul class="footer-links">
-                        <li class="list-items" ><a class="footer-nav" href="./index.html">Inicio</a></li>
-                        <li class="list-items"><a class="footer-nav" id="active-nav" href="./about.html">Acerca</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./gallery.html">Galería</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./rooms.html">Habitaciones</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./amenities.html">Servicios</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./bookings.html">Reservas</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./contact.html">Contacto</a></li>
-                        <li class="list-items"><a class="footer-nav" href="./faqs.html">Preguntas frecuentes</a></li>
+                        <li class="list-items" ><a class="footer-nav" href="{% url 'index' %}">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" id="active-nav" href="{% url 'about' %}">Acerca</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'gallery' %}">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'rooms' %}">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'amenities' %}">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'bookings' %}">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'contact' %}">Contacto</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'faqs' %}">Preguntas frecuentes</a></li>
                     </ul>
+                    
                 </div>
                 <div class="col-12 col-lg-4">
                     <h6 class="footer-header">

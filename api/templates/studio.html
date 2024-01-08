@@ -35,10 +35,8 @@
     <div class="row">
     <header class="header">
         <div class="header-left">
-            <a href="../index.html">
-                <img class="logo" src="{% static 'media/logo.png'%}" alt="grh-logo">
-            </a>
-        </div>
+            <img class="logo" src="{% static 'media/logo.png' %}" alt="grh-logo">
+    </div>
 
         <div class="header-right">
             <div class="nav-menu" id="navi-menu">
@@ -236,9 +234,7 @@
             <div class="row" id="footer-row">
                 <div class="col-12 col-lg-4">
                     <img class="footer-logo" src="{% static 'media/footer-logo.png'%}" alt="footer-logo">
-                    <p class="footer-text">Gordon Resort Hotel popularly known as McCarthy Beach is located in the University town of Abraka in Delta State.
-                        Set out in large expanse of land of over 65 hectares the resort boasts of over 90 exquisitely appointed and tastefully furnished Rooms/Suites. 
-                    </p>
+                    <p class="footer-text">El Gordon Resort Hotel, conocido popularmente como McCarthy Beach, se encuentra en la ciudad universitaria de Abraka, en el estado de Delta. Ubicado en una extensa área de tierra de más de 65 hectáreas, el resort cuenta con más de 90 habitaciones/suites exquisitamente decoradas y amuebladas con buen gusto.</p>
                 </div>
                 <div class="col-12 col-lg-4 ">
                     <h6 class="footer-header">
@@ -246,15 +242,16 @@
                     </h6>
 
                     <ul class="footer-links">
-                        <li class="list-items"><a class="footer-nav" href="../index.html">Inicio</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../about.html">Acerca de</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../gallery.html">Galería</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../rooms.html">Habitaciones</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../amenities.html">Servicios</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../bookings.html">Reservas</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../contact.html">Contacto</a></li>
-                        <li class="list-items"><a class="footer-nav" href="../faqs.html">Preguntas frecuentes</a></li>
+                        <li class="list-items" ><a class="footer-nav" href="{% url 'index' %}">Inicio</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'about' %}">Acerca</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'gallery' %}">Galería</a></li>
+                        <li class="list-items"><a class="footer-nav" id="active-nav" href="{% url 'rooms' %}">Habitaciones</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'amenities' %}">Servicios</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'bookings' %}">Reservas</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'contact' %}">Contacto</a></li>
+                        <li class="list-items"><a class="footer-nav" href="{% url 'faqs' %}">Preguntas frecuentes</a></li>
                     </ul>
+                    
                 </div>
                 <div class="col-12 col-lg-4">
                     <h6 class="footer-header">
