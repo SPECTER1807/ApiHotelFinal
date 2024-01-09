@@ -55,19 +55,29 @@ def registro_view(request):
 
 
 def login_view(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+    # Verificar si hay usuarios registrados
+    if User.objects.exists():
+        if request.method == 'POST':
+            # Obtener el correo y la contraseña del formulario
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+            
+            # Autenticar al usuario
+            user = authenticate(request, email=email, password=password)
+            
+            # Si el usuario es autenticado correctamente, iniciar sesión
+            if user is not None:
+                login(request, user)
+                # Redirige a la página deseada después del inicio de sesión
+                return redirect('dashboard')
+            else:
+                error_message = "Correo o contraseña incorrectos. Por favor, inténtalo de nuevo."
+                return render(request, 'authentication-login.html', {'error_message': error_message})
         
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('dashboard')
-        else:
-            error_message = "Los datos son incorrectos. Por favor, intentalo de nuevo"
-            return render(request, 'authentication-login.html', {'error_message': error_message})
-    return render(request, 'authentication-login.html')
-
+        return render(request, 'authentication-login.html')
+    else:
+        # Si no hay usuarios registrados, redirige al formulario de registro
+        return redirect('authentication-registro')
 
 class Dashboard(APIView):
     template_name="dashboard.html"
@@ -182,6 +192,25 @@ class Success(APIView):
     template_name="success.html"
     def get(self, request):
         return render(request,self.template_name) 
+
+
+from .forms import ReservaForm
+from .models import Reserva
+
+def reservas(request):
+    if request.method == 'POST':
+        form = ReservaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reservas_confirmacion')
+    else:
+        form = ReservaForm()
+
+    return render(request, 'reservas.html', {'form': form})
+
+def reservas_confirmacion(request):
+    return render(request, 'reservas_confirmacion.html')
+
     
 # # views.py
 

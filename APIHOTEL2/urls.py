@@ -21,9 +21,13 @@ from api import views
 
 
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Home.as_view(),name='index'),
+    path('reservas.html/', views.reservas, name='reservas'),
+    path('reservas_confirmacion.html', views.reservas_confirmacion, name='reservas_confirmacion'),
     path('authentication-login.html',views.login_view, name='login_view'),
     path('authentication-register.html', views.registro_view, name='registro'),
     path('dashboard.html',Dashboard.as_view(),name='dashboard'),
